@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ec">
+  <title>Marcación de vendedores | Sistemas TI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="register-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Sistemas TI inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 4 34 12v16l-14 8L6 28V12L20 4Z"/><path d="m12 23 5 5 11-13"/></svg></span><span class="brand-copy"><strong>SISTEMAS <b>TI</b></strong><small>CONTROL DE ASISTENCIA</small></span></a>
+    <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Volver al inicio</a>
+  </header>
+  <main class="register-layout">
+    <section class="register-heading"><div class="eyebrow"><span class="eyebrow-line"></span> CONTROL DE JORNADA</div><h1>Registro de<br><span>marcación.</span></h1><p>Selecciona tu usuario y registra el inicio o fin de tu jornada.</p><div class="date-chip"><span aria-hidden="true">▦</span><span id="today">Cargando fecha…</span></div></section>
+    <section class="attendance-card">
+      <div class="card-heading"><div><span class="section-label">01 / IDENTIFICACIÓN</span><h2>¿Quién está marcando?</h2></div><span class="user-count">4 vendedores</span></div>
+      <div class="seller-grid" role="group" aria-label="Selecciona un vendedor">
+        <button class="seller-option" type="button" data-seller="1"><span class="seller-avatar avatar-a">01</span><span class="seller-meta"><b>Vendedor 1</b><small>Equipo comercial</small></span><span class="check-mark">✓</span></button>
+        <button class="seller-option" type="button" data-seller="2"><span class="seller-avatar avatar-b">02</span><span class="seller-meta"><b>Vendedor 2</b><small>Equipo comercial</small></span><span class="check-mark">✓</span></button>
+        <button class="seller-option" type="button" data-seller="3"><span class="seller-avatar avatar-c">03</span><span class="seller-meta"><b>Vendedor 3</b><small>Equipo comercial</small></span><span class="check-mark">✓</span></button>
+        <button class="seller-option" type="button" data-seller="4"><span class="seller-avatar avatar-d">04</span><span class="seller-meta"><b>Vendedor 4</b><small>Equipo comercial</small></span><span class="check-mark">✓</span></button>
+      </div>
+      <div class="divider"></div>
+      <div class="card-heading lower-heading"><div><span class="section-label">02 / MARCACIÓN</span><h2>Registra tu movimiento</h2></div></div>
+      <div class="action-row"><button class="action-button entry-action" type="button" data-action="Ingreso"><span class="action-icon">↗</span><span><b>Registrar ingreso</b><small>Inicio de jornada</small></span></button><button class="action-button exit-action" type="button" data-action="Salida"><span class="action-icon">↙</span><span><b>Registrar salida</b><small>Fin de jornada</small></span></button></div>
+      <div class="divider"></div>
+      <div class="card-heading location-heading"><div><span class="section-label">03 / UBICACIÓN Y EVIDENCIA</span><h2>Verifica tu registro</h2></div></div>
+      <div class="details-grid">
+        <div class="location-box"><span class="detail-icon">⌖</span><div class="detail-content"><b>Ubicación GPS</b><p id="location-status">Activa la ubicación para registrar tus coordenadas.</p><span id="coordinates" class="coordinates"></span></div><button id="locate-button" class="text-button" type="button">Obtener ubicación</button></div>
+        <div class="photo-box"><div class="photo-copy"><span class="detail-icon">▧</span><div><b>Foto de evidencia</b><p>Toma una foto o selecciona una imagen.</p></div></div><label class="upload-button" for="photo-input">＋ Agregar foto</label><input id="photo-input" type="file" accept="image/*" capture="environment" hidden><div id="photo-preview" class="photo-preview" aria-live="polite"></div></div>
+      </div>
+      <div class="submit-row"><p><span class="lock-icon">▣</span> La hora y ubicación se guardan con tu marcación.</p><button class="submit-button" id="submit-button" type="button" disabled>Confirmar marcación <span aria-hidden="true">→</span></button></div>
+      <div id="result-message" class="result-message" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© 2026 Sistemas TI</span><span>Registro seguro · Equipo de ventas</span></footer>
+  <script src="registro.js"></script>
+</body>
+</html>
